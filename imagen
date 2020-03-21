@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructor</title>
+    <style type="text/css">
+        canvas {
+            border: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="micanvas"></canvas>
+    <img src="Logo_Malacara.png" id='img' style='display: none;'>
+
+    <script>
+        window.addEventListener('load', init);
+
+        function init() {
+            var canvas = document.getElementById('micanvas');
+            var ctx = canvas.getContext('2d');
+            var img = document.getElementById('img');
+            ctx.drawImage(img, 0, 0, 100, 200);
+        }
+    </script>
+</body>
+
+</html>
