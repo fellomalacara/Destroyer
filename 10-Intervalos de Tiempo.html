@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructor</title>
+    <style type="text/css">
+        canvas {
+            border: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="micanvas">"Tu navegador no soporta CANVAS"</canvas>
+    <input type="button" value="iniciar" id="boton">
+
+    <script>
+        var velocidad = 5,
+            direccion = velocidad,
+            iniciar = false,
+            x = 50,
+            y = 10;
+        var intervalo;
+        window.addEventListener('load', init);
+
+        function init() {
+            var canvas = document.getElementById('micanvas');
+            var ctx = canvas.getContext('2d');
+            ctx.fillstyle = 'rgb(200,0,0)';
+            ctx.fill();
+            document.getElementById('boton').addEventListener('clik', function() {
+
+            });
+        }
+
+        function draw(canvas, ctx, x, y) {
+            //canvas.width = canvas.width;
+            ctx.arc(x, y, 10, 0, 7);
+            ctx.fill();
+        }
+
+        function moveAndDraw() {
+            y += direccion;
+        }
+    </script>
+</body>
+
+</html>
